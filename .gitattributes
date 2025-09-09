@@ -1,0 +1,25 @@
+# Normalize line endings and mark text files
+* text=auto eol=lf
+
+# Treat common binary types as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.mp4 binary
+*.mov binary
+
+# Enforce consistent diffs for code
+*.md diff=markdown
+*.ts diff=ts
+*.tsx diff=ts
+*.js diff=javascript
+*.jsx diff=javascript
+*.css diff=css
+*.scss diff=css
+*.json linguist-language=JSON
+*.yml linguist-language=YAML
+*.yaml linguist-language=YAML
