@@ -1,56 +1,85 @@
-# Standard ignores
-.next/
+# Dependencies
 node_modules/
-ai_service/venv/
-arbitragebot_backup_*/
-*.DS_Store
+.pnp
+.pnp.js
+.pnpm-store/
 
-# Next.js / Build / Cache
+# Environment variables (do not commit secrets)
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+sigmacode_ai/.env*
+
+# Build outputs / Caches
 .next/
 .next/cache/
 out/
 build/
 dist/
 .turbo/
+**/dist/
+**/build/
+coverage/
 
-# Package Manager
-node_modules/
-.pnpm-store/
-
-# Env / Secrets
-.env
-.env.*
-!.env.example
-
-# Logs / Coverage
+# Logs
 logs/
+sigmacode_ai/logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-coverage/
 
-# Cypress
+# Cypress artifacts
 cypress/screenshots/
 cypress/videos/
 cypress/downloads/
 
-# Python / venvs / caches
+# Python virtual envs / caches
 ai_service/venv/
 venv/
 .venv/
 __pycache__/
 *.pyc
 
-# OS / Editor
+# OS / Editor files
 .DS_Store
+Thumbs.db
 .idea/
 .vscode/
-
-# Misc
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 *.swp
 *.swo
+
+# Docker
+.docker
+.dockerignore
+
+# Databases / local data
+*.db
+*.sqlite
+*.sqlite3
+sigmacode_ai/data-node/
+sigmacode_ai/meili_data*/
+pgdata*/
+
+# Project-specific
+arbitragebot_backup_*/
+.kombai/
+
+# LibreChat local databases (Mongo/WiredTiger) – do not version
+LibreChat_fresh/data-node/
+LibreChat_fresh/meili_data_v1.12/
+LibreChat_fresh/**/WiredTiger*
+LibreChat_fresh/**/journal/
 
 # TypeScript build info
 *.tsbuildinfo
